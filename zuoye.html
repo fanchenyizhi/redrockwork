@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zn-ch">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会变的盒子</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: space-around;
+            min-height: 100vh;
+            gap: 20px;
+        }
+
+        .box1 {
+            display: flex;
+            border: 2px solid black;
+            flex-wrap: nowrap;
+            align-self: center;
+            width: 200px;
+            height: 200px;
+            flex-shrink: 0;
+        }
+
+        .box2 {
+
+            border: 2px solid black;
+            flex-wrap: wrap;
+            align-self: center;
+            height: 230px;
+            flex-shrink: 1;
+            flex-grow: 1;
+            word-wrap: break-word;
+            overflow: auto;
+        }
+
+        .box3 {
+            border: 2px solid black;
+            flex-wrap: wrap;
+            align-self: flex-start;
+            height: 100px;
+            flex-shrink: 1;
+            flex-grow: 3;
+
+            word-wrap: break-word;
+            overflow: auto;
+        }
+
+        .box4 {
+            border: 2px solid black;
+            flex-wrap: wrap;
+            flex-shrink: 2;
+            word-wrap: break-word;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">我是一号盒子（不移动的那种</div>
+    <div class="box2">11111111111111111111112111111</div>
+    <div class="box3">22222222222222222222222222222222223</div>
+    <div class="box4">33333333333333333333333333333333333</div>
+</body>
+
+</html>
